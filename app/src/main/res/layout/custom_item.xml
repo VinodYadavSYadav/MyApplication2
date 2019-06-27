@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <data
+            class="Categoriesbinding1">
+    <variable name="categogrymodel" type="com.example.myapplication.viewmodel.CategoryViewmodel"/>
+</data>
+
+
+
+
+
+
+         <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                   xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                   android:orientation="vertical"
+
+     >
+
+
+
+
+         <TextView
+
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@{categogrymodel.title}"
+
+                 android:textStyle="bold"
+                 android:padding="6dp"
+                 android:background="#DCDCDC"
+                 android:textColor="#000"
+                 android:textSize="14dp"/>
+
+
+         <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:orientation="horizontal"
+                 android:layout_weight="15"
+                 android:background="#F0F0F0"
+                 android:weightSum="100"
+         >
+
+
+
+
+
+
+
+
+
+
+             <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical"
+                     android:gravity="center"
+                     android:layout_weight="70"
+                     android:layout_marginLeft="5dp"
+             >
+
+
+                 <TextView
+                         android:id="@+id/name1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@{categogrymodel.description ?? categogrymodel.title}"
+
+                         android:padding="6dp"
+                         android:textColor="#000"
+                         android:textSize="14dp"/>
+
+
+
+
+
+                 <TextView
+                         android:id="@+id/phone_numb"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text=""
+                         android:textColor="#000"
+                         android:textSize="14dp"
+
+                 />
+
+
+             </LinearLayout>
+
+
+
+             <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical"
+                     android:layout_weight="30"
+                     android:gravity="center"
+             >
+
+                 <ImageView
+                         android:id="@+id/propic"
+                         android:layout_width="match_parent"
+                         android:layout_height="80dp"
+                         android:layout_centerInParent="true"
+                         android:layout_gravity="center_horizontal|center"
+
+
+                         android:src="@{categogrymodel.imageHref}"
+
+
+                         android:baselineAligned="false"/>
+
+             </LinearLayout>
+
+
+            <!-- <LinearLayout
+                     android:id="@+id/edit_link"
+                     android:layout_width="0dp"
+                     android:layout_marginTop="12dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="15"
+             >
+
+                 <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="18dp"
+                         android:layout_marginRight="10dp"
+
+                         />
+
+
+             </LinearLayout>-->
+
+         </LinearLayout>
+
+
+
+     </LinearLayout>
+
+
+
+<!--
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+
+              android:orientation="vertical"
+
+>
+
+
+
+
+    <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{categogrymodel.name}"
+
+            android:textStyle="bold"
+            android:padding="6dp"
+            android:background="#DCDCDC"
+            android:textColor="#000"
+            android:textSize="14dp"/>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="15"
+            android:background="#F0F0F0"
+            android:weightSum="100"
+    >
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="55"
+                android:layout_marginLeft="5dp"
+        >
+
+
+            <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{categogrymodel.desc}"
+                    android:padding="6dp"
+                    android:textColor="#000"
+                    android:textSize="14dp"/>
+
+
+
+
+
+            <TextView
+                    android:id="@+id/phone_numb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="14dp"
+
+            />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="30"
+                android:gravity="center"
+        >
+
+            <ImageView
+                    android:id="@+id/propic"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal|center"
+
+
+                    android:src="@{categogrymodel.imagepath}"
+
+
+                    android:baselineAligned="false"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/edit_link"
+                android:layout_width="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+        >
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_marginRight="10dp"
+
+                    />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+-->
+
+
+</layout>
